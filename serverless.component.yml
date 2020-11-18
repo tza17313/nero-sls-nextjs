@@ -1,11 +1,11 @@
-name: nextjs
+name: nero-sls-nextjs
 version: 0.1.8
-author: 'Tencent Cloud, Inc.'
-org: 'Tencent Cloud, Inc.'
+author: 'nero'
+org: 'nero'
 description: Deploy a serverless Next.js application onto Tencent SCF and API Gateway.
 keywords: 'tencent, serverless, next.js'
-repo: 'https://github.com/serverless-components/tencent-nextjs'
-readme: 'https://github.com/serverless-components/tencent-nextjs/tree/master/README.md'
+repo: 'https://github.com/tza17313/nero-sls-nextjs'
+readme: 'https://github.com/tza17313/nero-sls-nextjs/blob/master/README.md'
 license: MIT
 main: ./src
 webDeployable: true

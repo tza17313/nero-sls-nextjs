@@ -1,6 +1,7 @@
 const { Component } = require('@serverless/core')
-const { Scf, Apigw, Cns, Cam, Metrics, Cos, Cdn } = require('tencent-component-toolkit')
+const { Scf, Apigw, Cns, Cam, Metrics, Cdn } = require('tencent-component-toolkit')
 const { TypeError } = require('tencent-component-toolkit/src/utils/error')
+const Cos = require('./cos')
 const {
   deepClone,
   uploadCodeToCos,
@@ -200,10 +201,7 @@ class ServerlessComopnent extends Component {
       const cosOutput = {
         region
       }
-      // flush bucket
-      if (inputs.cosConf.replace) {
-        await cos.flushBucketFiles(bucket)
-      }
+
       for (let i = 0; i < staticCosInputs.length; i++) {
         const curInputs = staticCosInputs[i]
         console.log(`Starting deploy directory ${curInputs.src} to cos bucket ${curInputs.bucket}`)
